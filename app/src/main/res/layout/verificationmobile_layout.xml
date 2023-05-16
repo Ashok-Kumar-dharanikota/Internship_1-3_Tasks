@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/ic_baseline_send_24"
+            android:id="@+id/img_send_otp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="OTP verification"
+            android:textSize="20sp"
+            android:textColor="@color/colortextfirst"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:text="We will send you an one time OTP on this given mobile number"
+            android:textColor="@color/colortextsecond"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:text="Enter mobile number"
+            android:textColor="@color/colortextsecond"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:gravity="center"
+            android:background="@drawable/backgroundbox"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="+91 "
+                android:textColor="@color/colortextfirst"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/input_mob_no"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/colortextfirst"
+                android:textSize="16sp"
+                android:hint="1234567890"
+                android:textStyle="bold"/>
+
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send OTP"
+                android:id="@+id/btnsend"
+                android:layout_margin="30dp"
+                android:background="@drawable/backgroundbutton"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <ProgressBar
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:id="@+id/probar1"/>
+
+
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout-->
+    <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".MainActivity">-->
+
+    <!--    &lt;!&ndash;Edittext for getting users phone number&ndash;&gt;-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/idEdtPhoneNumber"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:hint="Enter your phone"-->
+    <!--        android:importantForAutofill="no"-->
+    <!--        android:inputType="phone" />-->
+
+    <!--    &lt;!&ndash;Button for getting OTP&ndash;&gt;-->
+    <!--    <Button-->
+    <!--        android:id="@+id/idBtnGetOtp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/idEdtPhoneNumber"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:text="Get OTP"-->
+    <!--        android:textAllCaps="false" />-->
+
+    <!--    &lt;!&ndash;Edittext for getting otp from user&ndash;&gt;-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/idEdtOtp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/idBtnGetOtp"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:hint="Enter OTP"-->
+    <!--        android:importantForAutofill="no"-->
+    <!--        android:inputType="phone" />-->
+
+    <!--    &lt;!&ndash;button for verifying user OTP&ndash;&gt;-->
+    <!--    <Button-->
+    <!--        android:id="@+id/idBtnVerify"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/idEdtOtp"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:text="Verify OTP"-->
+    <!--        android:textAllCaps="false" />-->
+
+    <!--</RelativeLayout>-->
